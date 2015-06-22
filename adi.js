@@ -38,7 +38,7 @@ if (cmd == 'hello') {
     });
 } else if (cmd == 'climate') {
     unirest.get("https://simple-weather.p.mashape.com/weatherdata?lat=17.483473%C2%B0N&lng=78.317731%C2%B0E")
-        .header("X-Mashape-Key", "RMsnGCqBHVmshXsxvelFnbQaASqap1S21x0jsnbKmYuFVnje0S")
+        .header("X-Mashape-Key", "RMsnGCqBHVmshXsxvelFnbQaASqap1S21x0jsnbKmYuFVnje0S") //I know about this key. No Worries
         .header("Accept", "application/json")
         .end(function(result) {
             if (result.status == 200) {
