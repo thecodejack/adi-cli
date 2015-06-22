@@ -22,7 +22,7 @@ should be corrected to following if you are using node rather iojs
 ```
 
 ## Usage
-Following command display the current forecast of Hyderabad, India.(Will soon moveit to setup)
+Following command display the current forecast of Hyderabad, India.(Will soon move it into a setup)
 ```
 $ adi climate
 ```
@@ -49,4 +49,5 @@ You should expect mostly good support for the CLI below.
   - Terminal
 
 ## TODO
-There are more commands like `live f1`, `live football`, `live cricket`, `mytwitter`, `hn`(Hacker News). Will push them by replacing personal API keys. 
+- Config setup
+- There are more commands like `live f1`, `live football`, `live cricket`, `mytwitter`, `hn`(Hacker News). Will push them by replacing personal API keys. 
