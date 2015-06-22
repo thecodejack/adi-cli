@@ -1,0 +1,28 @@
+{
+  "name": "adi",
+  "version": "0.0.1",
+  "description": "CLI for adi's random stuff",
+  "bin": "adi.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=2.8.0"
+  },
+  "keywords": [
+    "cli",
+    "adi",
+    "node",
+    "javascript"
+  ],
+  "author": "Adi Srikanth",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "inquirer": "^0.8.5",
+    "meow": "^3.3.0",
+    "unirest": "^0.4.2"
+  },
+  "preferGlobal": true
+}
