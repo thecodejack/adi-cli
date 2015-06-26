@@ -50,4 +50,4 @@ You should expect mostly good support for the CLI below.
 
 ## TODO
 - Config setup
-- There are more commands like `live f1`, `live football`, `live cricket`, `mytwitter`, `hn`(Hacker News). Will push them by replacing personal API keys. 
+- There are more commands like `live f1`, `live football`, `mytwitter`, `hn`(Hacker News). Will push them by replacing personal API keys. 
