@@ -6,6 +6,7 @@ var pkg = require('./package.json');
 var chalk = require('chalk');
 var inquirer = require("inquirer");
 var unirest = require('unirest');
+var Promise = require("bluebird");
 
 var cli = meow({
     help: false,
@@ -56,7 +57,40 @@ if (cmd == 'hello') {
                 console.log(chalk.red('!!!Error Loading data'));
             }
         });
-} else {
+} else if(cmd == 'cricket') {
+    unirest.get('http://cricscore-api.appspot.com/csa')
+        .end(function(result){
+            var promises = [],
+                matches = result.body,
+                ids = [];
+
+            if(result.status == 200) {
+                ids = matches.map(function(match){
+                    return match.id;
+                });
+
+                return new Promise(function(resolve, reject) {
+                    unirest.get('http://cricscore-api.appspot.com/csa?id=' + ids.join('+'))
+                        .end(function(result) {
+                            var results = result.body;
+                            if(result.status == 200) {
+                                results.forEach(function(item){
+                                    console.log('***********************');
+                                    console.log(chalk.magenta(item.de));
+                                    console.log(chalk.yellow(item.si));
+                                    console.log('***********************')
+                                });
+                            } else {
+                                console.log(chalk.red('!!!Error Loading data'));
+                            }
+                            resolve();
+                        });
+                });
+            } else {
+                console.log(chalk.red('!!!Error Loading data'));
+            }
+        });
+}else {
 	cmd = args.join(' ');
     unirest.get("http://api.duckduckgo.com/?q='" + cmd + "'&format=json")
         .end(function(result) {

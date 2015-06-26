@@ -19,6 +19,7 @@
   ],
   "author": "Adi Srikanth",
   "dependencies": {
+    "bluebird": "^2.9.30",
     "chalk": "^1.0.0",
     "inquirer": "^0.8.5",
     "meow": "^3.3.0",
