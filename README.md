@@ -34,6 +34,26 @@ $ adi Java script
 
 You can add as many commands as you want.
 
+Available Commands
+------------------
+```
+adi hello
+```
+```
+adi cricket
+```
+```
+adi climate
+```
+```
+adi askme
+```
+```
+adi **
+```
+** provide any string, will display DuckDuckGo results
+Eg: `adi java script`
+
 ## Support (OS Terminals)
 
 You should expect mostly good support for the CLI below.
